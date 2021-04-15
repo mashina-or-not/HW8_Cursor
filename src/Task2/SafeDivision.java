@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SafeDivision {
     public static void safeDivision() {
-        int result;
+        double result;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter A: ");
         int a = scanner.nextInt();
@@ -12,7 +12,10 @@ public class SafeDivision {
         int b = scanner.nextInt();
         while (true) {
             try {
-                result = a / b;
+                if (b == 0) {
+                    throw new ArithmeticException();
+                }
+                result = (double) a / b;
                 break;
             } catch (ArithmeticException e) {
                 System.out.println("The number B is zero.\nEnter a new number B");
