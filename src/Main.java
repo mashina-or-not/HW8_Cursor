@@ -36,6 +36,7 @@ public class Main {
         //Task2
         System.out.println("*Task2*");
         SafeDivision.safeDivision();
+        System.out.println("-".repeat(30));
 
         //Task3
         System.out.println("*Task3*");
